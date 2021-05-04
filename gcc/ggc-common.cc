@@ -1272,8 +1272,8 @@ ggc_prune_overhead_list (void)
 void
 report_heap_memory_use ()
 {
-#if defined(HAVE_MALLINFO) || defined(HAVE_MALLINFO2)
-#ifdef HAVE_MALLINFO2
+#if defined(HAVE_DECL_MALLINFO) || defined(HAVE_DECL_MALLINFO2)
+#if HAVE_DECL_MALLINFO2
   #define MALLINFO_FN mallinfo2
 #else
   #define MALLINFO_FN mallinfo
